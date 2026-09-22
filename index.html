@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع الهاتف الذكي المحترف</title>
+    <style>
+        :root { --bg-body: #0f171e; --bg-card: #1e293b; --text-main: #f1f5f9; --text-sub: #94a3b8; }
+        * { box-sizing: border-box; font-family: sans-serif; }
+        body { margin: 0; padding: 20px; background-color: var(--bg-body); color: var(--text-main); display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .page-section { background: var(--bg-card); padding: 25px; border-radius: 12px; width: 100%; max-width: 360px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+        .big-box-btn { background-color: #2ecc71; color: white; padding: 20px; border-radius: 12px; font-size: 16px; font-weight: bold; border: none; cursor: pointer; width: 100%; margin-top: 15px; }
+        .small-card { background-color: #334155; border: 2px solid #475569; padding: 15px; border-radius: 10px; margin-top: 15px; text-align: center; font-weight: bold; cursor: pointer; }
+        .linux-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 15px; }
+        .linux-table th, .linux-table td { border: 1px solid #475569; padding: 10px; text-align: center; }
+        .linux-table th { background-color: #2c3e50; color: #3498db; }
+        .linux-table td code { font-family: monospace; color: #e74c3c; background: rgba(231, 76, 60, 0.1); padding: 2px 6px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="page-section">
+        <h1>لوحة الأدوات والبرمجة (أحمد)</h1>
+        <p style="color: var(--text-sub);">اضغط على المربع الأخضر بالأسفل لتفتح لك الأدوات البرمجية الحية فوراً بدون حماية تسجيل الدخول المعلقة:</p>
+        
+        <!-- المربع الكبير مفتوح مباشرة ويتفاعل باللمس -->
+        <button class="big-box-btn" onclick="document.getElementById('dashboard').style.display='block'; this.style.display='none';">🛠️ اضغط هنا لفتح لوحة الأدوات</button>
+        
+        <div id="dashboard" style="display: none;">
+            <div class="small-card" onclick="document.getElementById('ltab').style.display='block';">💻 أوامر لينكس وتيرمكس السريعة</div>
+            
+            <div class="linux-table-container" id="ltab" style="display: none;">
+                <table class="linux-table">
+                    <thead><tr><th>الأمر</th><th>وظيفة الأمر بالعامية</th></tr></thead>
+                    <tbody>
+                        <tr><td><code>clear</code></td><td>بيتنظف ويمسح الشاشة فوراً</td></tr>
+                        <tr><td><code>ls</code></td><td>بيعرّض لك كل الملفات</td></tr>
+                        <tr><td><code>cd</code></td><td>بيدخلك جوه أي مجلد تطلبه</td></tr>
+                        <tr><td><code>pwd</code></td><td>بيقولك أنت واقف فين بالظبط</td></tr>
+                        <tr><td><code>mkdir</code></td><td>بيعملك فولدر جديد باسمك</td></tr>
+                        <tr><td><code>rm -rf</code></td><td>بيمسح أي ملف نهائياً في ثانية</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
